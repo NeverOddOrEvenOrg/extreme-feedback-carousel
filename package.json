@@ -1,0 +1,23 @@
+{
+  "name": "build-monitor-carousel",
+  "version": "1.0.0",
+  "description": "Rotate through your SDLC monitoring dashboards for a holistic view into the health of your product portfolio.",
+  "repository": "https://github.com/NeverOddOrEven/build-monitor-carousel.git",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rotate",
+    "dashboard",
+    "build",
+    "monitor",
+    "carousel",
+    "SDLC"
+  ],
+  "author": "NeverOddOrEven",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.16.2"
+  }
+}
