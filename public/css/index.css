@@ -90,7 +90,6 @@ section#efc-body > iframe {
 
 footer#efc-footer {
   margin: 5px;
-  flex: 0 0 3em;
   padding: 0;
   border: 0;
   border-radius: 5px;
@@ -98,13 +97,23 @@ footer#efc-footer {
   white-space: nowrap;
 }
 
-div.breadcrumb:first-child {
+footer div#efc-time-remaining, div#efc-breadcrumbs-container {
+  display: inline-block;
+  margin: 5px;
+  color: white;
+  min-width: 30px;
+  text-align: center;
+  font-family: 'Mukta Mahee';
+  font-size: 1em;
+}
+
+footer div.breadcrumb:first-child {
   border: 3px solid #9b8de0;
   background-color: #b1a4f2;
   font-weight: bold;
 }
 
-div.breadcrumb {
+footer div.breadcrumb {
   border: 2px solid #237172;
   text-align: center;
   margin: 0 10px 0 10px;
@@ -114,7 +123,7 @@ div.breadcrumb {
   border-radius: 5px;
 }
 
-div.breadcrumb > p {
+footer div.breadcrumb > p {
   color: #f0ffe0;
   margin: 0;
   font-size: 1em;

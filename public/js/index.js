@@ -3,8 +3,14 @@ const MISSING_TITLE = 'View title not set.'
 $(document).ready(function(){
   var _dashboards = null;
   var _index = 0;
-  var breadcrumbs = [];
+  var _breadcrumbs = [];
+  var _timeRemaining = 0;
 
+  setInterval(() => {
+    _timeRemaining = Math.max(1, _timeRemaining - 1);
+    $('#efc-time-remaining > span').text(_timeRemaining);
+  }, 1000);
+  
   setTimeout(() => {
     $.getJSON('/api/v1/dashboards', (dashboards) => {
       _dashboards = dashboards || [];
@@ -18,7 +24,7 @@ $(document).ready(function(){
 
       createFooterBreadcrumbs();
       updatePage();
-      
+      $('#efc-time-remaining > span').show();
       $('iframe').show();
     });
   }, 3000);
@@ -26,6 +32,7 @@ $(document).ready(function(){
   function updatePage() {
     const seconds = _dashboards[_index].seconds || 15;
     const interval = seconds * 1000;
+    _timeRemaining = seconds + 1;
     
     showNextDashboard();
     updateFooter();
@@ -55,7 +62,7 @@ $(document).ready(function(){
     var breadcrumbs = _dashboards.map((dashboard, ix, dashboards) => {
       return $("<div>").addClass("breadcrumb").addClass("breadcrumb-"+ix).append($("<p>").text(dashboard.title));
     });
-    $('#efc-footer').append(breadcrumbs);
+    $('#efc-breadcrumbs-container').append(breadcrumbs);
   }
 
   function updateFooter() {
@@ -64,6 +71,6 @@ $(document).ready(function(){
     
     var lastView = $('.breadcrumb-' + dashboard_index);
     lastView.remove();
-    $('#efc-footer').append(lastView);
+    $('#efc-breadcrumbs-container').append(lastView);
   }
 });
