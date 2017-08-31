@@ -1,8 +1,8 @@
 {
-  "name": "build-monitor-carousel",
+  "name": "extreme-feedback-carousel",
   "version": "1.0.0",
-  "description": "Rotate through your SDLC monitoring dashboards for a holistic view into the health of your product portfolio.",
-  "repository": "https://github.com/NeverOddOrEven/build-monitor-carousel.git",
+  "description": "Cycle through your SDLC monitoring views for a holistic view into the health of your code. DevOps.",
+  "repository": "https://github.com/NeverOddOrEven/extreme-feedback-carousel.git",
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

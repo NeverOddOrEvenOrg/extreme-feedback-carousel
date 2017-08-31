@@ -18,7 +18,7 @@ Create `local/dashboards.json` file containing an array of configurations:
 ```
 [
   {
-    "title": "Foo", /* optional */
+    "title": "Foo", /* required */
     "url": "http://foo", /* required */
     "seconds": 10  /* optional; default 15 */
   },
