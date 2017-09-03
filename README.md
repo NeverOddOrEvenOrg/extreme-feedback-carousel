@@ -44,3 +44,7 @@ Currently, pages displayed must not set the X-Frame-Options header.
 - Add a template engine so that views can use server side variables, conditionals, and loops
 - Add request logging / winston
 - Add ability to proxy a webpage to prevent origin & frame restrictions
+- Add ability to login with github 
+- Add a persistence layer for configuration & other state (typicode/lowdb?)
+- Add a lightweight carousel to animate the "upcoming" view
+- Add ability to set a notification
